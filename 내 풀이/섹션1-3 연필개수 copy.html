@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1-3 - 연필개수</title>
+    </head>
+    <body>
+        <script>
+            function solution(student) {
+                // 학생의 수가 주어지면 총 연필 몇다스가 필요한지 알아내세용
+                // parameter로 넘어오는 것 학생 수 solution(25) 
+                // 연필 한다스는 12개 25명의 학생이 있으면 3다스가 필요함 나머지가 1명이기 때문
+                if (student%12 === 0) {
+                    return parseInt(student/12);
+                } else {
+                    return parseInt(student/12) + 1; 
+                    // 소수점 이하는 필요없기 때문 
+                    // ex) 23명의 학생이 주어지는 경우 23/12는 1.XXX
+                    // 그러므로 필요한 다스의 수는 2개
+                    // 학생수가 25으로 들어오는 경우는 3개
+                }
+                
+            }
+            console.log(solution(49));
+        </script>
+    </body>
+</html>
