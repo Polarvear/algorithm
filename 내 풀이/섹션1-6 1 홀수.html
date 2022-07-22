@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1-5 - 홀수</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr) {
+                // 주어지는 값 배열이 주어짐
+                // 구해야하는 값 배열중 홀수들의 총합
+                // 홀수들 중의 최솟값
+                let answer = [];
+
+                let total = 0;
+                let min = 10000000;
+                // 배열중 홀수들의 총합 구하기
+                for (let i =0; i < arr.length; i++) {
+                    if (arr[i] %2 !== 0) 
+                        total = total + arr[i];
+                }// end for
+                answer.push('총합:::', total);
+                
+                // 홀수들 중에서 최솟값 구하기
+                for (let i = 0; i < arr.length; i++) {
+                    if(arr[i] < min) 
+                        min = arr[i];
+                }// end for
+                answer.push('최솟값:::', min)
+                return answer;
+            }
+
+            let arr = [1,2];
+
+            console.log(solution(arr));
+        </script>
+    </body>
+</html>
