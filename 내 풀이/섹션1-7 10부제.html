@@ -1,16 +1,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>출력결과 - 섹션1-5 - 홀수</title>
+        <title>출력결과 - 섹션1-7 - 10부제</title>
     </head>
     <body>
         <script>
-            function solution(arr) {
+            function solution(day, arr) {
+
+                let violation = [];
+                for (let i = 0; i < arr.length; i++) {
+                    if (day === (arr[i]%10)) {
+                        violation.push(arr[i]);
+                    }
+                } return violation.length;
+
             }
 
-            let arr = [1,2];
+            
 
-            console.log(solution(arr));
+            const cars = [11, 21, 22, 33, 45];
+
+            console.log(solution(1, cars));
         </script>
     </body>
 </html>
