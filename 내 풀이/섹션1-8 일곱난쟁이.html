@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1-8 - 일곱난쟁이</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr) {
+                const correct = 100;
+                let nines = 0;
+                for (element of arr) {
+                    nines = nines + element;
+                }
+                
+                lier = nines - correct;
+                // console.log(lier);
+
+                for (let i = 0; i < arr.length; i++) { 
+                    for (let j = i; j < arr.length; j ++) {
+                        if (lier === (arr[i] + arr[j])) {
+                            let one = arr[i];
+                            let two = arr[j];
+                            arr.pop(one);
+                            arr.pop(two);
+                            console.log('거짓말쟁이 1번:::', arr[i], '거짓말쟁이 2번:::', arr[j]);
+                            return arr;
+                        }
+                    } 
+                } 
+            }
+            const littles = [15, 10, 25, 11, 8, 10, 21, 10, 15];
+
+            console.log(solution(littles));
+        </script>
+    </body>
+</html>
