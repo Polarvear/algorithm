@@ -16,19 +16,19 @@
                 // console.log(lier);
 
                 for (let i = 0; i < arr.length; i++) { 
-                    for (let j = i; j < arr.length; j ++) {
+                    for (let j = i + 1; j < arr.length; j ++) {
                         if (lier === (arr[i] + arr[j])) {
-                            let one = arr[i];
-                            let two = arr[j];
-                            arr.pop(one);
-                            arr.pop(two);
-                            console.log('거짓말쟁이 1번:::', arr[i], '거짓말쟁이 2번:::', arr[j]);
+                            // let one = arr[i];
+                            // let two = arr[j];
+                            let one = arr.splice(j, 1);
+                            let two = arr.splice(i, 1);
+                            console.log('거짓말쟁이 1번:::', one, '거짓말쟁이 2번:::', two);
                             return arr;
                         }
                     } 
                 } 
             }
-            const littles = [15, 10, 25, 11, 8, 10, 21, 10, 15];
+            const littles = [20, 7, 23, 19, 10, 15, 25, 8, 13];
 
             console.log(solution(littles));
         </script>
