@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1-11 - 대문자 찾기</title>
+    </head>
+    <body>
+        <script>
+            function solution(str) {
+                //주어지는 거 문자열 
+                // 찾아야하는 거 대문자의 개수
+                // 배열 탐색 for문
+                let answer = 0;
+                // 초기값 0할당 안하면 NaN 뜸
+                
+                // let rexExp = /^[A-Z]+$/;
+                // 정규식으로 하는 방법이 있을 텐데....
+                for (element of str) {
+                    if(element === element.toUpperCase())
+                    answer++;
+                } return answer;
+            }
+
+            const str = "BnNANa";
+            console.log(solution(str))
+
+        </script>
+    </body>
+</html>
