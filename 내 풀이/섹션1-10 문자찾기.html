@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1 - 10 - 문자 찾기</title>
+    </head>
+    <body>
+        <script>
+            function solution(str, char) {
+                let answer = [];
+
+                for (element of str) {
+                    if (element === char)
+                    answer.push(element);
+
+                } return answer.length;
+            }
+
+            let str = "BANANA";
+            console.log(solution(str, "N"));
+
+        </script>
+    </body>
+</html>
