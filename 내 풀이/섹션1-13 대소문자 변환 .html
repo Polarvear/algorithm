@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1 - 13 - 대소문자 변환</title>
+    </head>
+    <body>
+        <script>
+            function solution(str) {
+                let answer = "";
+                for (char of str) {
+                    if (char === char.toUpperCase()) {
+                        answer += char.toLowerCase();
+                    } else {
+                        answer += char.toUpperCase();
+                    }             
+                } return answer;
+            }
+            let str = "BanAna";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1 - 14 - 가장 긴 문자열</title>
+    </head>
+    <body>
+        <script>
+            function solution(str) {
+               let answer = " "; 
+               let len = Number.MIN_SAFE_INTEGER;
+               // 담아주는 이유? 왜? 첫 for 문에서 if 가 참이되어야함 
+               // 배열 탐색하고 싶니!? for 문 쓰세욘~
+               for (let i = 0; i < str.length; i++) {
+                // console.log(str[i].length);
+                if (str[i].length > len) {
+                    len = str[i].length; // 이 문장을 생각을 못해서 계속 막혔다.
+                    // 길이를 len에 바꿔넣어줘야지....쓰으으읍....졸려서 그런
+                    answer = str[i];
+                }
+               } return answer;
+            }
+            let strings=["teacher", "time", "student", "beautiful", "good"];
+            console.log(solution(strings));
+        </script>
+    </body>
+</html>
