@@ -6,6 +6,7 @@
     <body>
         <script>
             function solution(str) {
+<<<<<<< HEAD
                let answer = "";
                console.log(str.length);
                // substr 함수 사용하려고 했는데
@@ -33,6 +34,22 @@
 
             }
             let str = "abcde";
+=======
+               let answer = [];
+               let solution = "";
+               
+               for (let i = 0; i < str.length; i++) {
+                if (str.length%2 === 0) {
+                    answer.push(str[(str.length/2) -1], str[(str.length/2)]);
+                } else {
+                    answer.push(str[Math.floor(str.length/2)]);
+                    answer.substrig(2);
+                }
+               } return answer.join('');
+
+            }
+            let str = "teaer";
+>>>>>>> c453a6de84172b79e0874507a64a78ff450dfc9d
             console.log(solution(str));
         </script>
     </body>
