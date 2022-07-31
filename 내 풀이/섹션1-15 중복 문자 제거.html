@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1 - 15 - 중복 문자 제거</title>
+    </head>
+    <body>
+        <script>
+            function solution(str) {
+               let answer = "";
+                for (let i = 0; i < str.length; i++) {
+                    for (let j = i + 1; j < str.length; j++) {
+                        if (str[i] === str[j]) {
+                            console.log('ok');
+                            // 이거 5번 나오는데 
+                            // splice 랑 pop 으로 풀려고 했는데 안됨
+                            // 일단 이부분에 대해서 생각하기
+                            
+                        }
+                    }
+                } return str;
+            }
+            let str = "studystudy";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
