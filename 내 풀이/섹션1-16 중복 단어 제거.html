@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1 - 16 - 중복 단어 제거</title>
+    </head>
+    <body>
+        <script>
+            function solution(str) {
+               let answer = [];
+                for (let i = 0; i < str.length; i++) {
+                    for (let j = i + 1; j < str.length; j++) {
+                        if (str[i] === str[j]) {
+                            answer.push(str[j]);
+                        }
+                    }
+                } return answer;
+            }
+            const strs = ['good', 'food', 'good', 'food'];
+            console.log(solution(strs));
+        </script>
+    </body>
+</html>
