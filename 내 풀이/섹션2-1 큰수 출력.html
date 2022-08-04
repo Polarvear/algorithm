@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션1 - 16 - 중복 단어 제거</title>
+    </head>
+    <body>
+        <script>
+            function solution(nums) {
+                let answer = []; // 빈배열 준비
+                answer.push(nums[0]);
+                // 처음에 기준이 되는 0번째 인덱스 push 해줌
+                for (let i = 1; i < nums.length; i++)
+                { // 1번 인덱스부터 돌리는 건 잘했음
+                    if (nums[i] > nums[i - 1]) { // 첫 인덱스랑 비교해서 3 > 7이 아니니까 
+                        // push 안해주고 다음 인덱스는 2이고 값은 9니까 9 > 3 이니까 push해줌
+                        // 명심해야할 점은 첫값을 기준으로 돌린다.
+                        answer.push(nums[i]);
+                    }
+                } return answer;
+            }
+            const nums = [7, 6, 8, 5, 9, 12, 10];
+            // 예상 답은 7 8 9 12
+            console.log(solution(nums));
+        </script>
+    </body>
+</html>
