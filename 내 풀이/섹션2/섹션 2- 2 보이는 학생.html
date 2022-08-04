@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션2 - 2 - 보이는 학생</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr) {
+            // let answer = [];
+            let back = arr.length;
+            let tmp;
+            // answer.push(arr[0]);
+            for (let i = back-2; i >= 0; i--) {
+                for (let j = 0; j <=i; j++) {
+                    if (arr[j] > arr[j + 1]) {
+                        tmp = arr[j];
+                        arr[j] = arr[j + 1];
+                        arr[j + 1] = tmp;
+                    }
+                }
+            } return arr;
+        }
+            const students = [145, 140, 150, 160, 150, 170];
+            console.log(solution(students));
+        </script>
+    </body>
+</html>
