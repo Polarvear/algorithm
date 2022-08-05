@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션2 - 2 - 보이는 학생</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr) {
+            let answer = 1; // 이유 첫 번째 아이는 무조건 보이기 때문에 1부터 시작
+            let max = arr[0]; // 첫 번째 아이를 처음 max값에 넣어준다. 이유 첫 번째 아이보다 뒷 아이들이 전부 작으면 안보이기 때문 즉, 기준은 첫 번째 아이
+            //이제 for 문 돌면서 비교 & 탐색
+            for (let i = 1; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    answer++;
+                    max = arr[i]; // max 를 교체해주면 된다~
+                }
+            } return answer;
+        }
+            let students=[130, 135, 148, 140, 145, 150, 150, 153];
+            console.log(solution(students));
+        </script>
+    </body>
+</html>
