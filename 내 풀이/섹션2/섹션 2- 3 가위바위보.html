@@ -6,17 +6,21 @@
     <body>
         <script>
             function solution(arr1, arr2) {
-            let answer = [];
-                
+            let answer = "";
+              
 
-            for (let i = 0; i < arr1.length; i++) {
-                if ((arr1[i] - arr2[i]) === -2 || 1) {
-                    console.log(arr1[i] - arr2[i])
-                    answer.push('A');
-                } else if ((arri[i] - arr2[i]) === 2 || 1){
-                    answer.push('B');
+            for (let i = 0; i < arr1.length; i++) { 
+                let num = Number(arr1[i] - arr2[i]);
+                console.log("num:::", num);
+                if (num == -2 || 1) {
+                    // 여기서 논리가 틀림
+                    // console.log(arr1[i] - arr2[i])
+                    console.log('첫 if 출력');
+                    answer+= 'A' + ' ';
+                } else if (num == 2 || -1){
+                    answer+='B' + ' ';
                 } else {
-                    answer.push('D');
+                    answer+= 'D' + ' ';
                 }
             } return answer;
             
