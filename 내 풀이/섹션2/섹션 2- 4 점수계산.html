@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션2 - 4 - 점수계산</title>
+    </head>
+    <body>
+        <script>
+            function solution(arr) {
+                /*주어지는 것 ox 여부
+                구해야하는 것 o가 연속으로 있을 경우 + 1의 가산점 있음
+                현재까지의 로직n이라는 것을 만듦
+                1을 n으로 치환
+                */
+               let answer = '';
+               let n = 1; // 맞은 문제의 개수?
+               for(let i = 0; i < arr.length; i++) {
+                    if (arr[i] === 1) {
+                        answer++;
+                    if (arr[i + n] === 1) {
+                        answer = answer + n;
+                        n++; // 이 로직이 맞는 지 모르겠음
+                        //for문을 한번 더 돌려야하는 거 같기도 하고
+                    }
+                    }
+               } return answer;
+
+            
+        }
+            const ox = [1, 1, 0, 1, 0, 1];
+            //1이 맞은 경우 1이 연속으로 있으면 계속 ++
+            // 1 + 2 + 0 + 1 + 0 + 1 <== 이렇게 나와야함
+            // 5점
+            // 다 더하고 옆으로 비교해서 1이면 계속 ++ 이런식으로
+
+            console.log(solution(ox));
+        </script>
+    </body>
+</html>
