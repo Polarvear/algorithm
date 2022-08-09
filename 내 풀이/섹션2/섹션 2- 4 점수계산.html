@@ -11,26 +11,23 @@
                 현재까지의 로직n이라는 것을 만듦
                 1을 n으로 치환
                 */
-               let answer = '';
-               let n = 1; // 맞은 문제의 개수?
-               for(let i = 0; i < arr.length; i++) {
-                    if (arr[i] === 1) {
-                        answer++;
-                    if (arr[i + n] === 1) {
-                        answer = answer + n;
-                        n++; // 이 로직이 맞는 지 모르겠음
-                        //for문을 한번 더 돌려야하는 거 같기도 하고
-                    }
-                    }
-               } return answer;
-
-            
-        }
-            const ox = [1, 1, 0, 1, 0, 1];
+               let answer = 0;
+               let n = 0;
+               for (let i = 0; i < arr.length; i++) {
+                if (arr[i] === 1 ) {
+                    n++; //1ㅇ을 계속 만날 때마다 ++해줌 아니면 다시 초기화 22 line
+                    answer = n + answer;
+                } else {
+                n = 0;
+                    answer = n + answer;
+               }
+             } return answer;
+         }
+            const ox = [1, 1, 1, 1, 0, 1];
             //1이 맞은 경우 1이 연속으로 있으면 계속 ++
             // 1 + 2 + 0 + 1 + 0 + 1 <== 이렇게 나와야함
             // 5점
-            // 다 더하고 옆으로 비교해서 1이면 계속 ++ 이런식으로
+            // 다 더하고 옆으로 비교해서 1이면 계속 ++ 이런식으로 <= 어려운 접근이었음
 
             console.log(solution(ox));
         </script>
