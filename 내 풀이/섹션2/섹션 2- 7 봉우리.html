@@ -8,7 +8,7 @@
             function solution(arr) {
                 //네방향 탐색 
                 // 위쪽 방향을 보고싶으면 -1, 0 3시 방향 보려면 0, 1 6시 방향 보려면 1, 0 9시 방향 보려면 0, -1
-                let answer;
+                let answer = 0;
                 let n = arr.length;
                 let dx = [-1, 0, 1, 0];
                 let dy = [0, 1, 0, -1];
@@ -17,22 +17,32 @@
                 //격자의 가장자리에는 0으로 분포하고 있음
 
                 for(let i = 0; i < n; i++) {
-                    for(let j = 0; j < n; j++) {
+                    for(let j = 0; j < n; j++) { 
+
+                        let flag = 1;
+
                         for(let k = 0; k < 4; k++) { // 행좌표 열좌표 탐색
                             let nx = i + dx[k];
-                            let ny = i + jy[k];
-                            let flag = 0;
-                            if (arr[nx][ny] >= arr[i][j]) {
+                            let ny = i + dy[k];
+                            
+                            if (nx >= 0 && nx < n && ny >= 0 && ny < n && arr[nx][ny] >= arr[i][j]) {
                                 flag = 0;
                                 break;
                             } // 참이면 봉우리 X
                         }
-                    }
+                        if (flag) {
+                        answer++;   
+                    }   
                 }
-
-
+                        
             }
-    
+                return answer;
+        }
+            const arr=[[5, 3, 7, 2, 3], 
+                     [3, 7, 1, 6, 1],
+                     [7, 2, 5, 3, 4],
+                     [4, 3, 6, 4, 1],
+                     [8, 7, 3, 5, 2]];
             
             console.log(solution(arr));
         </script>
