@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>출력결과 - 섹션3-1 - 회문 문자열</title>
+    </head>
+    <body>
+        <script>
+            function solution(str) {
+            //대소문자 구분없이 거꾸로 읽었을 때 똑바로 읽었을 때 같은 문자열을 회문 문자열이라고 한다.
+            let answer = str;
+            //let answer1 = str1;   
+
+            let arr = Array.from(answer);    
+            let n = arr.length;
+            console.log(arr);
+
+            let arr1 = arr.reverse()
+            console.log(arr1);    
+
+            for (let i =0; i < n; i++) {
+                if(arr[i] === arr1[i]) {
+                    // console.log("oo");
+                }
+
+            }
+            //return answer;
+            }
+
+
+            const str = "gog";
+            console.log(solution(str));
+        </script>
+    </body>
+</html>
