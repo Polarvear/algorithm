@@ -7,27 +7,23 @@
         <script>
             function solution(str) {
             //대소문자 구분없이 거꾸로 읽었을 때 똑바로 읽었을 때 같은 문자열을 회문 문자열이라고 한다.
-            let answer = str;
-            //let answer1 = str1;   
-
+            let answer = str; 
             let arr = Array.from(answer);    
             let n = arr.length;
-            console.log(arr);
-
-            let arr1 = arr.reverse()
-            console.log(arr1);    
-
-            for (let i =0; i < n; i++) {
-                if(arr[i] === arr1[i]) {
-                    // console.log("oo");
+            let arr1 = [...arr]; // 디스트럭쳐링 할당
+            console.log("arr:::", arr);
+            arr1.reverse(); // 원본 배열 변경 
+            for (let i = 0; i < n; i++) {
+                if(arr[i].toUpperCase() === arr1[i].toUpperCase()) {
+                    return 'YES';
+                } else {
+                    return "NO";
+                    }
                 }
-
-            }
-            //return answer;
             }
 
 
-            const str = "gog";
+            const str = "Gog";
             console.log(solution(str));
         </script>
     </body>
