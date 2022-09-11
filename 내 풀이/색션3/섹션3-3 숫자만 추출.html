@@ -9,18 +9,14 @@
                 const reg = /[^0-9]/g;
 
                 const result = str.replace(reg, '');
-            
-                
-                console.log(result);
-                console.log(typeof result[0]);
-                // result.splice(0, 1);
+        
                 if(result[0] === '0') {
-                    console.log(result);
+                    const arr = Array.from(result);
+                    arr.splice(0, 1);                  
+                    return arr.join('');
                 } else {
-                    console.log('false');
+                    return result;
                 }
-
-
             }
 
             
